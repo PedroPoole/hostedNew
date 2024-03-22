@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hostaway-booking-widget {
+            margin-left: 20vw;
+            margin-right: 20vw;
+            margin-top: 40vh;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url("bg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            font-family: Helvetica,Arial, sans-serif;
+        }
+
+        #top-banner {
+            display: flex;
+            justify-content: space-between; /* Adjusts items to each end */
+            align-items: center;
+            background-color: #ffffff;
+            /* Or any color you prefer */
+            padding: 10px 20px;
+            /* Adjust the padding as needed */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Optional: Adds a subtle shadow for depth */
+        
+        }
+
+        #top-banner img {
+            height: 100px;
+            /* Adjust based on your logo's size */
+            margin-right: 20px;
+            /* Space between logo and title */
+        }
+
+        #top-banner h1 {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0;
+            font-size: 50px;
+            /* Adjust size as needed */
+            color: #333;
+            /* Title color */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top-banner">
+        <img src="logo.jpg" alt="Logo">
+        <h1>Book your place in Edinburgh</h1>
+    </div>
+    <script src="https://d2q3n06xhbi0am.cloudfront.net/widget.js?1640277196"></script>
+    <script>
+        window.searchBar({
+            baseUrl: 'https://host-ed.holidayfuture.com/',
+            showLocation: false,
+            color: '#2AEBCE',
+            rounded: true,
+            openInNewTab: true, // or false
+            font: 'Open Sans',
+        });
+    </script>
+    <div id="hostaway-booking-widget"></div>
+
+</body>
+
+</html>
