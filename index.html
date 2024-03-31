@@ -13,13 +13,12 @@
 
         body {
             width: 100vw;
-            min-height: 100vh;
-            max-height: 100svh;
+            height: 100svh;
             display: grid;
             grid-template:
-                'header header header header header header'10%
-                'left left main main right right'70%
-                'footer footer footer footer footer logo'20% / 10% 10% 30% 30% 10% 10%;
+                'header header header header header header' 10%
+                'left left main main right right' 70%
+                'footer footer footer footer footer logo' 20% / 10% 10% 30% 30% 10% 10%;
             margin: 0;
             background-image: url("bg.jpg") !important;
             background-size: cover;
@@ -30,13 +29,13 @@
         }
 
 
-        #mainTitle{
+        #mainTitle {
             font-size: 5vh;
-            color:white;
+            color: white;
             text-align: center;
         }
 
-        
+
 
         .top-banner {
             grid-area: header;
@@ -44,17 +43,17 @@
         }
 
 
-        .logo{
+        .logo {
             display: flex;
             background-color: transparent;
             grid-area: logo;
             justify-content: end;
-           
+
             align-items: end;
             /* Center children horizontally */
         }
 
-        .logo img{
+        .logo img {
             height: 10vh;
             padding: 3%;
         }
@@ -96,7 +95,7 @@
         });
     </script>
     <div class="top-banner">
-        
+
     </div>
 
     <div class="widget-container">
