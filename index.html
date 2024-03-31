@@ -7,69 +7,61 @@
     <title>Book your place in Edinburgh</title>
     <link rel="icon" href="logo.jpg" type="image/icon type">
     <style>
-        #hostaway-booking-widget {
-            margin-left: 20vw;
-            margin-right: 20vw;
-            margin-top: 20vh;
-            padding: 0;
+        * {
+            margin: 0;
         }
 
-
         body {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            /* Changes based on content size lalala */
-            align-items: center;
-            /* Center items horizontally */
+            width: 100vw;
             height: 100vh;
+            display: grid;
+            grid-template:
+                'header header header header header header'10%
+                'left left main main right right'70%
+                'footer footer footer footer footer logo'20% / 10% 10% 30% 30% 10% 10%;
             margin: 0;
-            padding: 0;
-            background-image: url("bg.jpg");
+            background-image: url("bg.jpg") !important;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
             font-family: Helvetica, Arial, sans-serif;
         }
 
 
-        #top-banner {
-            display: flex;
-            justify-content: center;
-            /* Center the title */
-            align-items: center;
-            background-color: transparent;
-            padding: 10px 20px;
-            position: relative;
-            /* Allows for absolute positioning of children */
-            width: 100%;
-            box-sizing: border-box;
-            /* Ensures padding is included in width */
-            margin: 0;
-        }
-
-        #top-banner img {
-            position: absolute;
-            /* Positions the logo absolutely within the banner */
-            left: 1vw;
-            /* Distance from the left edge */
-            top: 1vw;
-            /* Distance from the top edge */
-            height: 10vw;
-        }
-
-        #top-banner h1 {
-            margin-top: 6vh;
+        #mainTitle{
+            font-size: 5vh;
+            color:white;
             text-align: center;
-            font-size: 5vw;
-            color: white;
-            width: 100%;
-            /* Ensures the title spans the full width for accurate centering */
         }
 
+        
+
+        .top-banner {
+            grid-area: header;
+            background-color: transparent;
+        }
+
+
+        .logo{
+            display: flex;
+            background-color: transparent;
+            grid-area: logo;
+            justify-content: end;
+           
+            align-items: end;
+            /* Center children horizontally */
+        }
+
+        .logo img{
+            height: 10vh;
+            padding: 3%;
+        }
 
         .widget-container {
+            flex-direction: column;
+            grid-area: main;
+            background-color: transparent;
             flex-grow: 1;
             /* Allows the container to expand */
             display: flex;
@@ -91,10 +83,6 @@
 </head>
 
 <body>
-    <div id="top-banner">
-        <img src="logo.jpg" alt="Logo">
-        <h1>Book your place in Edinburgh</h1>
-    </div>
     <script src="https://d2q3n06xhbi0am.cloudfront.net/widget.js?1640277196"></script>
     <script>
         window.searchBar({
@@ -106,10 +94,17 @@
             font: 'Open Sans',
         });
     </script>
-    <div class="widget-container"> 
-        <div id="hostaway-booking-widget"></div>
+    <div class="top-banner">
+        
     </div>
 
+    <div class="widget-container">
+        <h1 id="mainTitle">BOOK YOUR PLACE IN EDINBURGH</h1>
+        <div id="hostaway-booking-widget"></div>
+    </div>
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo">
+    </div>
 </body>
 
 </html>
