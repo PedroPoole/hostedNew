@@ -16,9 +16,9 @@
             height: 100svh;
             display: grid;
             grid-template:
-                'header header header header header header' 10%
-                'left left main main right right' 70%
-                'footer footer footer footer footer logo' 20% / 10% 10% 30% 30% 10% 10%;
+                'header header header' 10%
+                'left main right' 70%
+                'footer footer logo' 20% / 20% 60% 20%;
             margin: 0;
             background-image: url("bg.jpg") !important;
             background-size: cover;
@@ -62,8 +62,7 @@
             flex-direction: column;
             grid-area: main;
             background-color: transparent;
-            flex-grow: 1;
-            /* Allows the container to expand */
+
             display: flex;
             justify-content: center;
             /* Center children vertically */
@@ -71,8 +70,6 @@
             /* Center children horizontally */
             width: 100%;
             /* Full width of its parent */
-            padding: 20px;
-            /* Optional: adds some padding around the widget */
         }
 
         #hostaway-booking-widget {
